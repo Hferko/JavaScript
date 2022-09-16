@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangai - Első házi feladat</title>
+    <style>
+        body {
+            background-color: #511111;
+            font-family: 'Lucida Sans', sans-serif;
+            text-align: center;
+        }
+
+        h3,
+        h4 {
+            color: teal;
+        }
+
+        main,
+        .card {
+            width: 85%;
+            padding: 0.5vw;
+            background-color: beige;
+            margin: 10px auto;
+            border: thin solid aqua;
+            border-radius: 8px;
+            box-shadow: 6px 8px 6px lavender;
+        }
+
+        hr {
+            width: 60%;
+            color: #ddd;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid peru;
+            color: green;
+            font-weight: 900;
+        }
+
+        tr:nth-child(even) {
+            background-color: bisque;
+        }
+
+        tr:hover {
+            background-color: white;
+        }
+
+        td:nth-child(odd) {
+            text-align: right;
+        }
+
+        td:nth-child(even) {
+            text-align: left;
+        }
+
+        thead {
+            background-color: brown;
+            color: lime;
+        }
+
+        input[type=date],
+        input[type=text],
+        button {            
+            padding: 4px;
+            font-weight: bold;
+            color: navy;
+            margin-top: 10px;
+        }
+        .kek{color: blue; font-weight: 400;}
+        .result{color: maroon; font-weight: 500;}
+        
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <h4>1. prompt segítségével kérjetek be egy felhasználónevet, majd köszöntsétek név szerint a html oldalon
+            </h4>
+            <p id="welcome" style="font-size: 20px;"></p>
+        </div>
+
+        <div class="card">
+            <h4>2. Kérjetek be 2 számot, és egy alert ablakba mutassátok meg a nagyobbat.</h4>
+
+            <fieldset>
+                <legend>
+                    <p>Kérem tehát a két számot</p>
+                </legend>
+                <form id="urlap" action="" style="text-align: right; margin-right: 40%">
+                    <label for="egy">Első szám: </label>
+                    <input type="text" name="egy" id="egy" size="7"><br>
+                    <label for="ketto">Második szám: </label>
+                    <input type="text" name="ketto" id="ketto" size="7"><br>     
+                </form>
+                <br>
+                <button onclick="hasonlit()">HASONLÍTSUK ÖSSZE A KÉT SZÁMOT</button>
+            </fieldset>
+
+            <p id="eredmeny"></p>
+            <h4>3. Jelenítsétek meg egymás alá, az összes aritmetiaki műveletet a 2 szám közt.</h4>
+            <p id="tablazat"></p>
+            <small id="feladat4"></small>
+           
+        </div> 
+
+        <div class="card">
+            <h4 >5. Az "age" változóról döntéstek el, hogy 25 és 35 év közt van-e vagy sem. Az eredményt jelenítsétek meg konzolban. </h4>
+            <h5>Születési évének megjelölése fontos lenne számunkra</h5>         
+            <form>
+                <label><small>Ha teheti, itt adja meg (csak az év): </small> </label>
+                <input type="text" name="" id="datum" maxlength="4" size="4"> <br>
+            </form>
+            <button onclick="ellenor()" style="margin-top: 10px;"><b>A MEGADOTT ADOTT ÉLETKOR ELLENŐRZÉSE</b> </button>
+            <p id="korod"></p>  
+            <br>          
+        </div>
+        <hr>
+    </main>
+    <script src="feladat1.js"></script>
+</body>
+
+</html>
