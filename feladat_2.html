@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangai - Második házi feladat</title>
+    <style>
+        body {
+            background-color: #511111;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        h3,
+        h4 {
+            color: teal;
+        }
+
+        main,
+        .card {
+            width: 85%;
+            padding: 0.5vw;
+            background-color: beige;
+            margin: 10px auto;
+            border: thin solid green;
+            border-radius: 8px;
+            box-shadow: 6px 8px 6px lavender;
+        }
+
+        ul {
+            text-align: left;
+            margin-left: 40%;
+            list-style-type: none;
+        }
+
+        li:last-child {
+            margin-left: -9px;
+        }
+
+        hr {
+            width: 60%;
+            color: #ddd;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid peru;    
+        }
+
+        tr:nth-child(even) {
+            background-color: bisque;
+        }
+
+        tr:hover {
+            background-color: white;
+        }
+
+        td:nth-child(odd) {
+            text-align: left;
+            padding-left: 30%;
+        }
+
+        td:nth-child(even) {
+            text-align: left;
+        }
+
+        th {
+            background-color: brown;
+            color: lime;
+        }
+
+        input[type=number],
+        select,
+        button {
+            padding: 4px;
+            font-weight: bold;
+            color: navy;
+            margin-top: 10px;
+            width: 30%;
+        }    
+        
+        .result {
+            color: maroon;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <h4>1. Prompt segítségével kérjetek be egy számot, majd for ciklus segítségével, generáljátok ki
+                (és a html documanetumban jelenítsétek meg) a bekért szám 10-es szorzótábláját.
+            </h4>
+            <p id="szam"></p>
+            <p id="lista"></p>
+        </div>
+
+        <div class="card">
+            <h4>2. A bekért számnak írjuk ki az osztóit, amiben 1 és önmaga nem szerepel.
+                Ha nincs ilyen, akkor írjuk ki, hogy "a [bekért számnak] nincs osztója".</h4>
+                <p id="felsorol"></p>
+        </div>
+
+        <div class="card">
+            <h4>3. Írjunk egy prim nevezetű függvényt, mely beneti paraméternek megkap egy számot, és kimenetként
+                visszatér egy boolean típussal (true, ha primszám a bemeneti érték, false, ha nem) </h4>
+
+            <input type="number" id="number" placeholder="Válasszon egy számot: " onchange="kiir(this.value)" style="border:2px solid lime;">
+            
+            <hr>
+            <p id="prim"></p>
+        </div>
+
+        <div class="card">
+            <h4>4.a. Jelenítsétek meg egy listában vagy div táblázatban (kinek amelyik szimpatikusabb)
+                Azon szemlyek névsorát (firstName, lastName), akik vezető beosztásban vannak.</h4>
+            <p id="tabla"></p>
+        </div>            
+
+        <div class="card">
+            <h4>5. A listáz gombra kattintva jelenítsük meg a kiválasztott beosztásban levők névsorát. </h4>
+
+            <select name="beosztas" onchange="cegunk(this.value)">
+                <option value="" selected>Válasszon a beosztások közül:</option>
+                <option value="dolgozó">DOLGOZÓK</option>
+                <option value="vezető">VEZÍREK</option>              
+            </select>
+            <hr>
+            <p id="valasztott"></p>
+        </div>
+        <hr>
+    </main>
+    <script src="feladat2.js"></script>
+</body>
+
+</html>
