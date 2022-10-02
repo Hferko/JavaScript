@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onlány pincér - Hangai</title>
+    <style>
+        body {
+            background-color: #511111;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            text-align: center;
+        }
+
+        h3,
+        h4 {
+            color: teal;
+        }
+
+        main,
+        .card {
+            width: 85%;
+            padding: 0.5vw;
+            background-color: beige;
+            margin: 10px auto;
+            border: thin solid aqua;
+            border-radius: 8px;
+            box-shadow: 6px 8px 6px lavender;
+        }
+
+        hr {
+            width: 60%;
+            color: #ddd;
+        }
+
+        input[type=number],
+        input[type=text],
+        select,
+        button {
+            padding: 4px;
+            font-weight: bold;
+            color: navy;
+            margin-top: 10px;           
+        }
+
+        ul {
+            text-align: left;
+            margin-left: 30%;
+            list-style: none;
+        }
+
+        li::before {
+            content: "🍹";
+            padding-right: 8px;
+        }
+
+        .rejtve {
+            display: none;
+        }
+
+        .row {
+            display: flex;
+            width: 80%;
+           margin-left: 10%;
+        }       
+
+        .cell {
+            width: 100%;
+            border: 1px solid peru;
+            margin: 0 0 -1px -1px;
+            padding: 5px;
+            background-color: beige;
+        }     
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="card">
+            <h4>1. A "Rendeléseim" gombra kattintva, jeleítsétek meg az oldalon egymás alá a rendelt italokat.</h4>
+
+            <small>Csak a 'RENDELEK' gombra kattintava lesz érvényes a rendelés</small><br>
+            <select id="rendeles">
+                <option value="" selected>Kérem adja le a rendelést</option>
+                <option value="cola">COLA</option>
+                <option value="limonádé">LIMONÁDÉ</option>
+                <option value="kávé">KÁVÉ</option>
+                <option value="víz">FRISS VÍZ</option>
+                <option value="gyümölcslé">GYÜMÖLCSLÉ</option>
+            </select><br>
+
+            <button onclick="rendeles()" style="letter-spacing:3px;">RENDELEK</button>
+            <button id="osszRendeles">Rendeléseim</button>
+            <hr>
+
+            <p id="tetel"></p>
+            <p id="lista"></p>
+            <br>
+            <button class="rejtve" id="rendelesVege">Nem kívánok többet rendelni</button>
+        </div>
+
+        <div class="card">
+            <h4>4. Feladat: Írjatok egy korosztály függvényt, mely bemenetként megkapja egy személy életkorát (hogy hány
+                éves), kimenetként pedig visszatér az életkornak megfelelő stringgel.
+            </h4>
+
+            <label><small>Kérem adja meg életkorát (éveinek számát):</small> </label>
+            <input type="number" name="eletkor" min="0" max="99" size="3" placeholder="99" id="eletkor">
+
+            <p id="nos"></p>
+            <p id="allapota"></p>
+        </div>
+
+        <div class="card">
+            <h4>5. Feladat: Írjatok egy függvényt, mely bemeneti paraméterként megkap 2 tömböt, és visszatér a 2 tömb közös halmazával.</h4>
+            
+            <button id="halmaz">AZ 5. FELADAT PRÓBÁLKOZÁSA</button>
+            <br>
+            <p id="tombok"></p>
+            <p id="metszet" style="color: maroon;"></p>
+        </div>
+        <div class="card">
+            <h4>6. Feladat: Írjatok egy függvényt, mely feltölt egy tömböt sakktábla szerűen. Vagyis, ami előállít egy sakktáblát.</h4>
+            <p>Kérem adja meg a táblázatunk adatait</p>
+
+            <input type="number" id="szeles" min="1" max="40" size="10" placeholder="Szélessége">
+            <input type="number" id="hosszu" min="1" max="40" size="10"placeholder="Hosszúsága">
+            <br>
+
+            <button id="matrix">NEO: "Lássuk hát a Mátrixot megrajzolva !"</button>
+            <p id="content"></p>
+        </div>
+        <hr>
+    </main>
+    <script src="feladat3.js"></script>
+</body>
+
+</html>
