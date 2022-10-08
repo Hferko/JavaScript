@@ -1,6 +1,7 @@
 /*
 ​
-
+/*---------- Gyakorlatok Stringekkel -----------------
+!!!!!! Az alábbi feladatokhoz ne használj reguláris kifejezéseket !!!!!!!
 ​
     1. Kerjetek be prompt segitsegevel egy nevet Es konzolban jelenitsetek meg ennek a nevnek a monogramjat
        (tehat a kezdobetuit)
