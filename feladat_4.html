@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringes feladatok - Hangai</title>
+    <style>
+        body {
+            background-color: #511111;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            text-align: center;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h3,
+        h4 {
+            color: teal;
+        }
+
+        main,
+        .card {
+            width: 85%;
+            padding: 0.5vw;
+            background-color: beige;
+            margin: 10px auto;
+            border: thin solid aqua;
+            border-radius: 8px;
+            box-shadow: 6px 8px 6px lavender;
+        }
+
+        hr {
+            width: 60%;
+            color: #ddd;
+        }
+
+        textarea {
+            font-size: 16px;
+        }
+
+        input[type=date],
+        input[type=text],
+        select,
+        button {
+            padding: 4px;
+            font-weight: bold;
+            color: navy;
+            margin-top: 10px;
+        }
+
+        ul {
+            text-align: left;
+            margin-left: 30%;
+            list-style: none;
+        }
+
+        li::before {
+            content: "🍹";
+            padding-right: 8px;
+        }
+
+        .rejtve {
+            display: none;
+        }
+
+        .row {
+            display: flex;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .cell {
+            width: 100%;
+            border: 1px solid peru;
+            margin: 0 0 -1px -1px;
+            padding: 5px;
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Gyakorlatok Stringekkel</h2>
+    <main>
+        <div class="card">
+            <h4>
+                1. Feladat: Kérjetek be prompt segitségével egy nevet, és konzolban jelenitsétek meg ennek a névnek a
+                monogramját
+            </h4>
+            <button id="monogram">Kezdődjék az első feladat</button>
+            <p id="kiir"></p>
+        </div>
+
+        <div class="card">
+            <h4> 2. Feladat: Kérjetek be egy hosszab szöveget, és konzolban irjátok ki a szöveg mondatainak a számát.
+            </h4>
+            <p>Ide talán bemásolhatna valami szépet és lélekemelőt. Több mondatban...</p>
+            <textarea id="szoveg" rows="22" cols="50">
+        Hah, de mi szörnyű zaj,
+        Milly lárma riasztja
+        Egyszerre az egyház
+        Temetői nyugalmát!
+        Mennydörgés?
+        Vagy kásának forrása fazékban?...
+        Nem!
+        Ott ember hortyog.
+
+        Ugy van! Ez emberalak.
+        Egy zugban két öklére hajolva
+        Alszik ... hanem íme fölébredt,
+        Miután elhortyantotta magát.
+        Ásít ... szemeit dörzsölve körülnéz...
+        Lát és sejt ... sejtése pogány.
+        Megy az ajtóhoz; megrázza kilincsét.
+        És rázta hiába.
+        Éles eszével
+        Átlátta azonnal
+        A dolog állását,
+        És ezt mondotta: „Bezártak”.
+        S még egyszer mondotta: „Bezártak”.
+            </textarea>
+            <br>
+            <button id="mondatok">Számoljuk meg a mondatokat</button>
+            <p id="mondatSzam"></p>
+        </div>
+
+        <div class="card">
+            <h4>3. Feladat: Írj függvényt, mely bemeneti paraméterként megkap egy fájlnevet, kimenetként pedig visszatér
+                a fájl kiterjesztésével.</h4>
+            <input type="text" id="file" placeholder="Ide jöhet EGY file-név..."><br>
+            <button id="tipus">A file kiterjesztése:</button><span id="kiterjeszt"></span>
+        </div>
+
+        <div class="card">
+            <h4> 4. Feladat írjatok egy getMonth("2022-10-6") nevezetű függvényt, mely bemenetként megkap egy datum
+                stringet YYYY-MM-DD dátimformátumban és a dátumstringből a megfelelő értéket térítí vissza.</h4>
+            <label><span>Mikor is...? &nbsp;</span> &emsp; <span>Mely időszak legyen?</span></label><br>
+            <input type="date" id="date">
+
+            <select id="ertek" disabled>
+                <option value="" selected>Válasszon időszakot</option>
+                <option value="year">ÉV</option>
+                <option value="month">HÓNAP</option>
+                <option value="day">NAP</option>
+            </select><br>
+
+            <p id="eredmeny"></p>
+        </div>
+    </main>
+    <hr>
+
+    <h2>Gyakorlatok reguláris kifejezésekkel</h2>
+    <main>
+        <div class="card">
+            <h4>A Reguláris kifejezések feladatainak megoldásának gyenge próbálkozása a Konzolon lesz látható.<br>
+            A megjelenítésükhöz kéretik a lenti gombra kattintani</h4>
+            
+            <button id="regex">A NÉGY REGEXP FELADAT megtekintése</button><br>
+        </div>
+        <hr>
+    </main>
+    <script src="feladat4.js"></script>
+</body>
+
+</html>
