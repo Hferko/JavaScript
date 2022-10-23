@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangai - OOP házi feladat</title>
+    <style>
+        body {
+            background-color: #511111;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        h1,h3,h4 {
+            color: teal;
+            line-height: 1.5;
+        }
+
+        main,
+        .card {
+            width: 85%;
+            padding: 0.5vw;
+            background-color: beige;
+            margin: 10px auto;
+            border: thin solid aqua;
+            border-radius: 8px;
+            box-shadow: 6px 8px 6px lavender;
+        }
+
+        hr {
+            width: 60%;
+            color: #ddd;
+        }
+
+        input[type=number],
+        input[type=text],
+        button {
+            padding: 4px;
+            font-size: 15px;
+            font-weight: bold;
+            color: navy;
+            margin-top: 10px;
+        }
+
+        .row {
+            display: flex;
+            width: 96%;
+            margin-left: 2%;            
+        }
+
+        .cell {
+            width: 100%;
+            margin: 0 0 -1px -1px;
+            padding: 5px;
+            background-color: white;
+        }
+
+        span {margin-right: 1%;}
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>OOP (Objektum Orientált Programozás)</h1>
+        <div class="card">
+            <h4 style="text-align:left;">1. Készíts egy olyan osztályt, mely egy tömböt tárolására alkalmas, és<br>
+                - Képes kiszamolni az elemek összegét, átlagát, minimumát, maximumát (ezek egy-egy külön függvény
+                legyenek)<br>
+                - Egy másik ugyanilyen példány tömbjének elemeiből képes átvenni azokat az elemeket, amelyek még nem
+                szerepelnek saját magában
+            </h4>
+            <label>Kérem adja meg milyen hosszúak legyenek a tömbök: </label>
+            <input type="number" name="elso" min="2" max="20" size="3" placeholder="1" id="elso"><br>
+
+            <button id="szamol1">Random első tömb</button>
+            <button id="szamol2" disabled>Random második tömb</button>
+            <hr>
+            <p>Első tömb:</p>
+            <p id="tomb1"></p>
+            <p>Második tömb:</p>
+            <p id="tomb2"></p>
+            <hr>
+            <p>Az első tömb-példány metódusai:</p>
+
+            <button id="osszeg" disabled>Elemek összege</button>
+            <button id="atlag" disabled>Elemek átlaga</button>
+            <button id="minimum" disabled>Elemek minimuma</button>
+            <button id="maximum" disabled>Elemek maximuma</button>
+            <br><br>
+            <div class="row">
+                <div class="cell" id="ossz"></div>
+                <div class="cell" id="atl"></div>
+                <div class="cell" id="min"></div>
+                <div class="cell" id="max"></div>
+            </div>
+            <hr>
+            <p> A második tömb-példány metódusait is meghívom, de itt hozzáveszem az előző tömb elemeit</p>
+            <button id="masik" disabled>A második példány metódusai</button>
+            <br>
+            <p id="eredmey"></p>
+            <hr>
+            <p>A két tömb összevonva: </p>
+            <p id="osszevonva"></p>
+            <p>Sorbarakva: </p>
+            <p id="sorba"></p>
+        </div>
+
+        <div class="card">
+            <h3>5. feladat:</h3>
+            <h3 style="text-align: center;">Lottósorsolás</h3>
+            <select id="valaszt" style="font-weight: bold;color: navy;">
+                <option value="" selected>Mennyi számmal kíván tippelni?</option>
+                <option value="1">Egy</option>
+                <option value="2">Kettő</option>
+                <option value="3">Három</option>
+                <option value="4">Négy</option>
+                <option value="5">Ötös lottó</option>
+                <option value="6">Hatos lottó</option>
+                <option value="7">Skandináv lottó</option>
+                <option value="8">("Nyóc(ker)")</option>
+                <option value="9">Kilenc</option>
+                <option value="10">10</option>
+            </select><br>
+            <p> <mark>Válasszon annyi nyertes számot, amennyit fent megjelölt! </mark> </p>
+            <div id="kontener" style="text-align: left;margin: 3%;"></div>
+            <hr>
+            <p id="text" style="text-align:left;">Még nem választott mennyi számmal kíván tippelni.</p>
+            <button id="sorsol" disabled>Induljon a lottósorsolás</button>
+            <br>
+            <p id="tipped"></p>
+            <p id="szoveg"></p>
+            <p id="sorsolt" style="padding-left: 4%;font-size:18px;color:red;"></p>
+            <p id="eredmeny"></p>
+            <p id="nyert"></p>
+        </div>
+        <hr>
+    </main>
+    <script src="tombok.js"></script>
+    <script src="rendeles.js"></script>
+    <script src="cica.js"></script>
+    <script src="auto.js"></script>
+    <script src="feladat5.js"></script>
+    <script src="lotto.js"></script>
+</body>
+
+</html>
